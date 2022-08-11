@@ -115,5 +115,5 @@ jobs:
                 goPort=8050 \
                 containerRegistry=${{ env.REGISTRY }} \
                 containerRegistryUsername=${{ github.actor }} \
-                containerRegistryPassword=${{ secrets.GITHUB_TOKEN }} \
+                containerRegistryPassword=${{ secrets.PACKAGES_TOKEN }} \
                 deployApim=false
