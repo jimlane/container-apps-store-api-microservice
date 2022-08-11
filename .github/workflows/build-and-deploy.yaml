@@ -58,7 +58,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.PACKAGES_TOKEN}}
+          password: ${{ secrets.GITHUB_TOKEN}}
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
       - name: Extract Docker metadata
@@ -115,5 +115,5 @@ jobs:
                 goPort=8050 \
                 containerRegistry=${{ env.REGISTRY }} \
                 containerRegistryUsername=${{ github.actor }} \
-                containerRegistryPassword=${{ secrets.PACKAGES_TOKEN }} \
+                containerRegistryPassword=${{ secrets.GITHUB_TOKEN }} \
                 deployApim=false
